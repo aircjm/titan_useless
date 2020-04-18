@@ -1,0 +1,25 @@
+#datasource
+spring:
+  datasource:
+    druid:
+      stat-view-servlet:
+        loginUsername: admin
+        loginPassword: 123456
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          username: root
+          password: root
+          url: jdbc:mysql://titan-mysql:3306/titan?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+          driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: titan-redis
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: INFO
+  file:
+    name: log/dice.log

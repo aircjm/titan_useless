@@ -1,0 +1,34 @@
+#端口号
+server:
+  port: 9091
+spring:
+  #mail
+  mail:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  #默认properties
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy/MM/dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 50MB
+mybatis-plus:
+  typeEnumsPackage: com.aircjm.titan.enums
+  global-config:
+    db-config:
+      id-type: auto
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  mapper-locations: classpath:/mapper/*Mapper.xml

@@ -1,0 +1,21 @@
+#datasource
+spring:
+  datasource:
+    druid:
+      stat-view-servlet:
+        loginUsername: admin
+        loginPassword: 123456
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          username: titan
+          password: titan
+          url: jdbc:mysql://localhost:3306/titan?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+          driver-class-name: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    root: info
+    com.aircjm.titan.mapper: trace
+titan:
+  doc-disabled: false
