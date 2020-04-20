@@ -65,7 +65,8 @@ public class PageController extends BaseController {
      */
     @PostMapping
     public RestResponse savePage(@RequestBody Article page) {
-        page.setCreator(this.user().getId());
+        // todo 粗暴处理报错
+//        page.setCreator(this.user().getId());
         articleService.savePage(page);
         return RestResponse.ok("保存文章成功");
     }

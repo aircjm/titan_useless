@@ -153,6 +153,11 @@
             <version>4.6.7</version>
         </dependency>
         <dependency>
+            <groupId>com.taskadapter</groupId>
+            <artifactId>trello-java-wrapper</artifactId>
+            <version>0.13</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>

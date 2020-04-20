@@ -160,7 +160,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         if (article.getContent().length() > DiceConsts.MAX_CONTENT_COUNT) {
             throw new TipException("文章内容字数不能超过" + DiceConsts.MAX_CONTENT_COUNT);
         }
-        if (null == article.getCreator()) {
+        if (null == article.getCreateBy()) {
             throw new TipException("请先登陆后发布文章");
         }
 
@@ -336,7 +336,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         if (page.getContent().length() > DiceConsts.MAX_CONTENT_COUNT) {
             throw new TipException("自定义页面容字数不能超过" + DiceConsts.MAX_CONTENT_COUNT);
         }
-        if (null == page.getCreator()) {
+        if (null == page.getCreateBy()) {
             throw new TipException("请先登陆");
         }
         if (null != page.getId()) {

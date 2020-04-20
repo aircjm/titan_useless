@@ -30,12 +30,12 @@ public class BaseEntity<T extends Model<?>> extends Model<T> {
     /**
      * 创建人
      */
-    private Integer creator;
+    private String createBy;
 
     /**
      * 最后修改人
      */
-    private Integer modifier;
+    private String updateBy;
 
     /**
      * 逻辑删除标识

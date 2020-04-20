@@ -61,7 +61,8 @@ public class ArticleController extends BaseController {
      */
     @PostMapping
     public RestResponse saveArticle(@RequestBody ArticleParam articleParam) {
-        articleParam.setCreator(this.user().getId());
+        // todo 粗暴处理报错
+//        articleParam.setCreator(this.user().getId());
         Integer articleId = articleService.saveArticle(articleParam);
         return RestResponse.ok(articleId);
     }

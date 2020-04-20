@@ -386,3 +386,8 @@ create table sys_config (
   primary key (id)
 ) comment = '参数配置表';
 
+-- 设置参数配置
+insert into sys_config values(1, 'trello开发者应用Key', 'trello.dev.api.applicationKey',     'key', 'trello开发者属性 请自己设置'  ,   0, 'admin', '2020-04-20 00:00:01', 'admin', '2020-04-20 00:00:01', 0);
+insert into sys_config values(2, 'trello开发者API Token',     'trello.dev.api.accessToken',  'token', 'trello开发者属性 请自己设置',       0, 'admin', '2020-04-20 00:00:01', 'admin', '2020-04-20 00:00:01',0 );
+
+
