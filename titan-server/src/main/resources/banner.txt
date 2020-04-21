@@ -1,17 +1,3 @@
 ${AnsiColor.BLUE}
-
-                                                    ,---,        ,---,   ,----..       ,---,.
-                                                  .'  .' `\   ,`--.' |  /   /   \    ,'  .' |
-                                                ,---.'     \  |   :  : |   :     : ,---.'   |
-                                                |   |  .`\  | :   |  ' .   |  ;. / |   |   .'
-                                                :   : |  '  | |   :  | .   ; /--`  :   :  |-,
-                                                |   ' '  ;  : '   '  ; ;   | ;     :   |  ;/|
-                                                '   | ;  .  | |   |  | |   : |     |   :   .'
-                                                |   | :  |  ' '   :  ; .   | '___  |   |  |-,
-                                                '   : | /  ;  |   |  ' '   ; : .'| '   :  ;/|
-                                                |   | '` ,/   '   :  | '   | '/  : |   |    \
-                                                ;   :  .'     ;   |.'  |   :    /  |   :   .'
-                                                |   ,.'       '---'     \   \ .'   |   | ,'
-                                                '---'                    `---`     `----'
 ${AnsiColor.BRIGHT_YELLOW}
-::: Spring-Boot ${spring-boot.version}     ::: Dice (version:${application.formatted-version})
+::: Spring-Boot ${spring-boot.version}     ::: Project (version:${application.formatted-version})
