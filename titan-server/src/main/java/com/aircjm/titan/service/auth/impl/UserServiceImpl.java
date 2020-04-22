@@ -80,18 +80,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (!md5.equals(user.getPasswordMd5())) {
             throw new TipException("用户名或者密码错误");
         }
-
-        // todo 这里清空 Token 之后还能获得用户信，后续另外处理
-//        if (SecurityContextHolder.getContext().isAuthenticated()) {
-//            // If the user has been logged in
-//            throw new TipException("您已登录，请不要重复登录");
-//        }
-
         // Log it then login successful
         log.info("用户登录: {}", user.getUsername());
         user.setLogged(LocalDateTime.now());
         user.updateById();
-
         // Generate new token
         return buildAuthToken(user);
     }

@@ -53,4 +53,38 @@ const request = extend({
   credentials: 'include', // 默认请求是否带上cookie
 });
 
+/*
+
+// request拦截器, 改变 options.
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
+request.interceptors.request.use((url, options) => {
+  let tokenSessionStorage: string | null = sessionStorage.getItem('token');
+  if ((tokenSessionStorage === null || tokenSessionStorage.length === 0) && url !== '/api/login/account') {
+    window.location.href = '/user/login';
+    return;
+  }
+
+  if (tokenSessionStorage === null) {
+    tokenSessionStorage = '';
+  }
+
+  options.headers = {
+    Accept: 'application/json',
+    'Content-Type': 'application/json; charset=utf-8',
+    Authorization: tokenSessionStorage,
+    ...options.headers,
+  };
+
+
+  // eslint-disable-next-line consistent-return
+  return {
+    options: { ...options },
+  };
+});*/
+
+
+
+
+
 export default request;
